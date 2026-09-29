@@ -15,7 +15,7 @@ class OverlayView: NSView {
     required init?(coder decoder: NSCoder) {
         super.init(coder: decoder)
         self.wantsLayer = true
-        self.animator().isHidden = true
+        self.isHidden = true
         self.alphaValue = 0;
         
         setBackground()

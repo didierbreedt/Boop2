@@ -14,7 +14,7 @@ class PopoverViewController: NSViewController {
     @IBOutlet weak var overlayView: OverlayView!
     @IBOutlet weak var popoverView: PopoverContainerView!
     @IBOutlet weak var searchField: SearchField!
-    @IBOutlet weak var editorView: SyntaxTextView!
+    @IBOutlet weak var editorView: BoopEditorView!
     @IBOutlet weak var statusView: StatusView!
     
     @IBOutlet weak var scriptManager: ScriptManager!

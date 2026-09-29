@@ -1,0 +1,82 @@
+name: macOS build
+
+on:
+  push:
+    branches: [main]
+    tags: ['v*']
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: macos-15-intel
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Run unit tests
+        run: |
+          xcodebuild \
+            -project Boop/Boop.xcodeproj \
+            -scheme Boop \
+            -configuration Debug \
+            -destination 'platform=macOS' \
+            -derivedDataPath "$RUNNER_TEMP/boop2-tests" \
+            CODE_SIGNING_ALLOWED=NO \
+            -only-testing:BoopTests \
+            test
+
+      - name: Build universal app
+        run: |
+          xcodebuild \
+            -project Boop/Boop.xcodeproj \
+            -scheme Boop \
+            -configuration Release \
+            -destination 'platform=macOS' \
+            -derivedDataPath "$RUNNER_TEMP/boop2-derived" \
+            ARCHS='arm64 x86_64' \
+            ONLY_ACTIVE_ARCH=NO \
+            CODE_SIGNING_ALLOWED=NO \
+            build
+
+      - name: Sign and package app
+        run: |
+          app="$RUNNER_TEMP/boop2-derived/Build/Products/Release/Boop2.app"
+          test -d "$app"
+          test "$(lipo -archs "$app/Contents/MacOS/Boop2")" = 'x86_64 arm64'
+          codesign --force --deep --sign - \
+            --entitlements Boop/Boop/BoopRelease.entitlements "$app"
+          codesign --verify --deep --strict "$app"
+          ditto -c -k --sequesterRsrc --keepParent "$app" Boop2-macOS.zip
+          unzip -t Boop2-macOS.zip
+
+      - name: Upload build artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: Boop2-macOS
+          path: Boop2-macOS.zip
+          if-no-files-found: error
+          retention-days: 30
+
+  release:
+    if: startsWith(github.ref, 'refs/tags/v')
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          name: Boop2-macOS
+
+      - name: Publish tagged release
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+        run: |
+          gh release create "$GITHUB_REF_NAME" Boop2-macOS.zip \
+            --verify-tag \
+            --title "Boop2 $GITHUB_REF_NAME" \
+            --notes 'Native editor with persistent tabs, line numbers, text counts, and Boop scripts. The app uses an ad hoc signature and is not notarized.'

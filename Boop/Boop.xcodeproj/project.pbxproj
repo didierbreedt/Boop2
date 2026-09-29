@@ -7,11 +7,40 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A10000000000000000000001 /* BoopEditorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000000000000000000004 /* BoopEditorView.swift */; };
+		A10000000000000000000002 /* BoopEditorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000000000000000000004 /* BoopEditorView.swift */; };
+		A10000000000000000000003 /* BoopEditorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000000000000000000004 /* BoopEditorView.swift */; };
+		A20000000000000000000001 /* TabItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000004 /* TabItemView.swift */; };
+		A20000000000000000000002 /* TabItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000004 /* TabItemView.swift */; };
+		A20000000000000000000003 /* TabItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000004 /* TabItemView.swift */; };
 		2C08A74F24B2269C00E1BD83 /* Script+Require.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C0BC0DC24AAC518009B8631 /* Script+Require.swift */; };
 		2C0BC0DD24AAC518009B8631 /* Script+Require.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C0BC0DC24AAC518009B8631 /* Script+Require.swift */; };
 		2C0BC0DE24AAC64F009B8631 /* Script+Require.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C0BC0DC24AAC518009B8631 /* Script+Require.swift */; };
 		2C17C66A24271DDA005C911C /* BoopTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C17C66924271DDA005C911C /* BoopTests.swift */; };
 		2C17C67224271EBD005C911C /* ScriptManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C17C67124271EBD005C911C /* ScriptManagerTests.swift */; };
+		7A1B2C3D4E5F60718293A4B5 /* TextStats.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A1B2C3D4E5F60718293A4E1 /* TextStats.swift */; };
+		7A1B2C3D4E5F60718293A4B6 /* TabManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A1B2C3D4E5F60718293A4E2 /* TabManager.swift */; };
+		7A1B2C3D4E5F60718293A4C1 /* TextStats.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A1B2C3D4E5F60718293A4E1 /* TextStats.swift */; };
+		7A1B2C3D4E5F60718293A4C3 /* TextStats.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A1B2C3D4E5F60718293A4E1 /* TextStats.swift */; };
+		7A1B2C3D4E5F60718293A4C4 /* TabManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A1B2C3D4E5F60718293A4E2 /* TabManager.swift */; };
+		7A1B2C3D4E5F60718293A4C6 /* TabManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A1B2C3D4E5F60718293A4E2 /* TabManager.swift */; };
+		7A1B2C3D4E5F60718293A4C7 /* TextStatsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A1B2C3D4E5F60718293A4E3 /* TextStatsTests.swift */; };
+		7A1B2C3D4E5F60718293A4C8 /* TabManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A1B2C3D4E5F60718293A4E4 /* TabManagerTests.swift */; };
+		7A1B2C3D4E5F60718293A4B9 /* BoopLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A1B2C3D4E5F60718293A4E5 /* BoopLog.swift */; };
+		7A1B2C3D4E5F60718293A4C9 /* BoopLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A1B2C3D4E5F60718293A4E5 /* BoopLog.swift */; };
+		7A1B2C3D4E5F60718293A4D1 /* BoopLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A1B2C3D4E5F60718293A4E5 /* BoopLog.swift */; };
+		7A1B2C3D4E5F60718293A4F1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C20667521FD628E0082570E /* AppDelegate.swift */; };
+		7A1B2C3D4E5F60718293A4F2 /* PopoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C2066A121FE47090082570E /* PopoverViewController.swift */; };
+		7A1B2C3D4E5F60718293A4F3 /* ThemeSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CEC93F9249C2D600080B9B8 /* ThemeSettingsViewController.swift */; };
+		7A1B2C3D4E5F60718293A4F4 /* ScriptsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C9761D82214E3B500AFF8CD /* ScriptsTableViewController.swift */; };
+		7A1B2C3D4E5F60718293A4F5 /* OverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C20669D21FE445E0082570E /* OverlayView.swift */; };
+		7A1B2C3D4E5F60718293A4F6 /* PopoverContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C873BE02697C2A800D9A3F0 /* PopoverContainerView.swift */; };
+		7A1B2C3D4E5F60718293A4F7 /* SearchField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C2066A521FE53870082570E /* SearchField.swift */; };
+		7A1B2C3D4E5F60718293A4F8 /* ScriptTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CA245DB224822EA00586DFD /* ScriptTableView.swift */; };
+		7A1B2C3D4E5F60718293A4F9 /* ScriptTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C9761E02214E68D00AFF8CD /* ScriptTableViewCell.swift */; };
+		7A1B2C3D4E5F60718293A4FA /* AppDelegateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A1B2C3D4E5F60718293A4E6 /* AppDelegateTests.swift */; };
+		7A1B2C3D4E5F60718293B109 /* BoopUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A1B2C3D4E5F60718293B102 /* BoopUITests.swift */; };
+		7A1B2C3D4E5F60718293A4FC /* SavannaKit in Frameworks */ = {isa = PBXBuildFile; productRef = 7A1B2C3D4E5F60718293A4FB /* SavannaKit */; };
 		2C17C67324271EE8005C911C /* ScriptManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C9761DB2214E45300AFF8CD /* ScriptManager.swift */; };
 		2C17C6762427214B005C911C /* Script.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C9761DE2214E46800AFF8CD /* Script.swift */; };
 		2C17C6772427214D005C911C /* ScriptExecution.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C53B6DF226D404E00DC6861 /* ScriptExecution.swift */; };
@@ -90,6 +119,13 @@
 			remoteGlobalIDString = 2C20667121FD628E0082570E;
 			remoteInfo = Boop;
 		};
+		7A1B2C3D4E5F60718293B10D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2C20666A21FD628E0082570E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2C20667121FD628E0082570E;
+			remoteInfo = Boop;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -118,11 +154,22 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		A10000000000000000000004 /* BoopEditorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoopEditorView.swift; sourceTree = "<group>"; };
+		A20000000000000000000004 /* TabItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabItemView.swift; sourceTree = "<group>"; };
 		2C0BC0DC24AAC518009B8631 /* Script+Require.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Script+Require.swift"; sourceTree = "<group>"; };
 		2C17C66724271DDA005C911C /* BoopTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BoopTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C17C66924271DDA005C911C /* BoopTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoopTests.swift; sourceTree = "<group>"; };
 		2C17C66B24271DDA005C911C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2C17C67124271EBD005C911C /* ScriptManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScriptManagerTests.swift; sourceTree = "<group>"; };
+		7A1B2C3D4E5F60718293A4E1 /* TextStats.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextStats.swift; sourceTree = "<group>"; };
+		7A1B2C3D4E5F60718293A4E2 /* TabManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabManager.swift; sourceTree = "<group>"; };
+		7A1B2C3D4E5F60718293A4E3 /* TextStatsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextStatsTests.swift; sourceTree = "<group>"; };
+		7A1B2C3D4E5F60718293A4E4 /* TabManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabManagerTests.swift; sourceTree = "<group>"; };
+		7A1B2C3D4E5F60718293A4E5 /* BoopLog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoopLog.swift; sourceTree = "<group>"; };
+		7A1B2C3D4E5F60718293A4E6 /* AppDelegateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegateTests.swift; sourceTree = "<group>"; };
+		7A1B2C3D4E5F60718293B102 /* BoopUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoopUITests.swift; sourceTree = "<group>"; };
+		7A1B2C3D4E5F60718293B103 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7A1B2C3D4E5F60718293B104 /* BoopUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BoopUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C20667221FD628E0082570E /* Boop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Boop.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C20667521FD628E0082570E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2C20667721FD62910082570E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -165,6 +212,22 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7A1B2C3D4E5F60718293A4FC /* SavannaKit in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7A1B2C3D4E5F60718293B106 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7A1B2C3D4E5F60718293B109 /* BoopUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7A1B2C3D4E5F60718293B107 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -195,6 +258,9 @@
 				2C17C66924271DDA005C911C /* BoopTests.swift */,
 				2C17C66B24271DDA005C911C /* Info.plist */,
 				2C17C67124271EBD005C911C /* ScriptManagerTests.swift */,
+				7A1B2C3D4E5F60718293A4E3 /* TextStatsTests.swift */,
+				7A1B2C3D4E5F60718293A4E4 /* TabManagerTests.swift */,
+				7A1B2C3D4E5F60718293A4E6 /* AppDelegateTests.swift */,
 			);
 			path = BoopTests;
 			sourceTree = "<group>";
@@ -205,9 +271,19 @@
 				2C5ED41C2357F65400322893 /* UI */,
 				2C20667421FD628E0082570E /* Boop */,
 				2C17C66824271DDA005C911C /* BoopTests */,
+				7A1B2C3D4E5F60718293B101 /* BoopUITests */,
 				2C20667321FD628E0082570E /* Products */,
 				53D77B44249A4019002A2F02 /* Frameworks */,
 			);
+			sourceTree = "<group>";
+		};
+		7A1B2C3D4E5F60718293B101 /* BoopUITests */ = {
+			isa = PBXGroup;
+			children = (
+				7A1B2C3D4E5F60718293B102 /* BoopUITests.swift */,
+				7A1B2C3D4E5F60718293B103 /* Info.plist */,
+			);
+			path = BoopUITests;
 			sourceTree = "<group>";
 		};
 		2C20667321FD628E0082570E /* Products */ = {
@@ -215,6 +291,7 @@
 			children = (
 				2C20667221FD628E0082570E /* Boop.app */,
 				2C17C66724271DDA005C911C /* BoopTests.xctest */,
+				7A1B2C3D4E5F60718293B104 /* BoopUITests.xctest */,
 				2C60A56024871273006496BA /* Boop.app */,
 			);
 			name = Products;
@@ -280,6 +357,8 @@
 		2C20669821FD767E0082570E /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				A10000000000000000000004 /* BoopEditorView.swift */,
+				A20000000000000000000004 /* TabItemView.swift */,
 				2C20669921FD76900082570E /* StatusView.swift */,
 				2C20669D21FE445E0082570E /* OverlayView.swift */,
 				2C2066A321FE47CE0082570E /* PopoverView.swift */,
@@ -307,6 +386,8 @@
 				2C9761DD2214E45D00AFF8CD /* Models */,
 				2C9761DB2214E45300AFF8CD /* ScriptManager.swift */,
 				2C60A4A12482FE9E006496BA /* UpdateBuddy.swift */,
+				7A1B2C3D4E5F60718293A4E2 /* TabManager.swift */,
+				7A1B2C3D4E5F60718293A4E5 /* BoopLog.swift */,
 			);
 			path = System;
 			sourceTree = "<group>";
@@ -318,6 +399,7 @@
 				2C0BC0DC24AAC518009B8631 /* Script+Require.swift */,
 				2C53B6DF226D404E00DC6861 /* ScriptExecution.swift */,
 				2C60A4A3248300CE006496BA /* AppVersion.swift */,
+				7A1B2C3D4E5F60718293A4E1 /* TextStats.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -356,9 +438,29 @@
 				2C17C66D24271DDA005C911C /* PBXTargetDependency */,
 			);
 			name = BoopTests;
+			packageProductDependencies = (
+				7A1B2C3D4E5F60718293A4FB /* SavannaKit */,
+			);
 			productName = BoopTests;
 			productReference = 2C17C66724271DDA005C911C /* BoopTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		7A1B2C3D4E5F60718293B105 /* BoopUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7A1B2C3D4E5F60718293B10A /* Build configuration list for PBXNativeTarget "BoopUITests" */;
+			buildPhases = (
+				7A1B2C3D4E5F60718293B106 /* Sources */,
+				7A1B2C3D4E5F60718293B107 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7A1B2C3D4E5F60718293B108 /* PBXTargetDependency */,
+			);
+			name = BoopUITests;
+			productName = BoopUITests;
+			productReference = 7A1B2C3D4E5F60718293B104 /* BoopUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 		2C20667121FD628E0082570E /* Boop */ = {
 			isa = PBXNativeTarget;
@@ -418,6 +520,10 @@
 						CreatedOnToolsVersion = 11.0;
 						TestTargetID = 2C20667121FD628E0082570E;
 					};
+					7A1B2C3D4E5F60718293B105 = {
+						CreatedOnToolsVersion = 26.0;
+						TestTargetID = 2C20667121FD628E0082570E;
+					};
 					2C20667121FD628E0082570E = {
 						CreatedOnToolsVersion = 10.1;
 					};
@@ -443,6 +549,7 @@
 				2C20667121FD628E0082570E /* Boop */,
 				2C17C66624271DDA005C911C /* BoopTests */,
 				2C60A53924871273006496BA /* Boop (App Store) */,
+				7A1B2C3D4E5F60718293B105 /* BoopUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -484,6 +591,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A10000000000000000000001 /* BoopEditorView.swift in Sources */,
+				A20000000000000000000001 /* TabItemView.swift in Sources */,
 				2C17C67224271EBD005C911C /* ScriptManagerTests.swift in Sources */,
 				2C17C67B2427218B005C911C /* StatusView.swift in Sources */,
 				2C17C6762427214B005C911C /* Script.swift in Sources */,
@@ -493,6 +602,21 @@
 				2C60A56224871730006496BA /* UpdateTextField.swift in Sources */,
 				2C17C66A24271DDA005C911C /* BoopTests.swift in Sources */,
 				2C17C67324271EE8005C911C /* ScriptManager.swift in Sources */,
+				7A1B2C3D4E5F60718293A4C3 /* TextStats.swift in Sources */,
+				7A1B2C3D4E5F60718293A4C6 /* TabManager.swift in Sources */,
+				7A1B2C3D4E5F60718293A4C7 /* TextStatsTests.swift in Sources */,
+				7A1B2C3D4E5F60718293A4C8 /* TabManagerTests.swift in Sources */,
+				7A1B2C3D4E5F60718293A4D1 /* BoopLog.swift in Sources */,
+				7A1B2C3D4E5F60718293A4F1 /* AppDelegate.swift in Sources */,
+				7A1B2C3D4E5F60718293A4F2 /* PopoverViewController.swift in Sources */,
+				7A1B2C3D4E5F60718293A4F3 /* ThemeSettingsViewController.swift in Sources */,
+				7A1B2C3D4E5F60718293A4F4 /* ScriptsTableViewController.swift in Sources */,
+				7A1B2C3D4E5F60718293A4F5 /* OverlayView.swift in Sources */,
+				7A1B2C3D4E5F60718293A4F6 /* PopoverContainerView.swift in Sources */,
+				7A1B2C3D4E5F60718293A4F7 /* SearchField.swift in Sources */,
+				7A1B2C3D4E5F60718293A4F8 /* ScriptTableView.swift in Sources */,
+				7A1B2C3D4E5F60718293A4F9 /* ScriptTableViewCell.swift in Sources */,
+				7A1B2C3D4E5F60718293A4FA /* AppDelegateTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -500,6 +624,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A10000000000000000000002 /* BoopEditorView.swift in Sources */,
+				A20000000000000000000002 /* TabItemView.swift in Sources */,
 				2C873BE12697C2A800D9A3F0 /* PopoverContainerView.swift in Sources */,
 				2CC211C5236FB5C1007CECEE /* ScriptsSettingsViewController.swift in Sources */,
 				2C53B6E0226D404E00DC6861 /* ScriptExecution.swift in Sources */,
@@ -525,6 +651,9 @@
 				2CC211C3236E3141007CECEE /* PreferencesTabViewController.swift in Sources */,
 				2CEC93FA249C2D600080B9B8 /* ThemeSettingsViewController.swift in Sources */,
 				2C9761D92214E3B500AFF8CD /* ScriptsTableViewController.swift in Sources */,
+				7A1B2C3D4E5F60718293A4B5 /* TextStats.swift in Sources */,
+				7A1B2C3D4E5F60718293A4B6 /* TabManager.swift in Sources */,
+				7A1B2C3D4E5F60718293A4B9 /* BoopLog.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -532,6 +661,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A10000000000000000000003 /* BoopEditorView.swift in Sources */,
+				A20000000000000000000003 /* TabItemView.swift in Sources */,
 				2C60A53B24871273006496BA /* ScriptsSettingsViewController.swift in Sources */,
 				2C60A53C24871273006496BA /* ScriptExecution.swift in Sources */,
 				2C60A53D24871273006496BA /* Colors.swift in Sources */,
@@ -557,6 +688,9 @@
 				2C60A54E24871273006496BA /* UpdateTextField.swift in Sources */,
 				2C60A54F24871273006496BA /* PreferencesTabViewController.swift in Sources */,
 				2C60A55024871273006496BA /* ScriptsTableViewController.swift in Sources */,
+				7A1B2C3D4E5F60718293A4C1 /* TextStats.swift in Sources */,
+				7A1B2C3D4E5F60718293A4C4 /* TabManager.swift in Sources */,
+				7A1B2C3D4E5F60718293A4C9 /* BoopLog.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -567,6 +701,11 @@
 			isa = PBXTargetDependency;
 			target = 2C20667121FD628E0082570E /* Boop */;
 			targetProxy = 2C17C66C24271DDA005C911C /* PBXContainerItemProxy */;
+		};
+		7A1B2C3D4E5F60718293B108 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2C20667121FD628E0082570E /* Boop */;
+			targetProxy = 7A1B2C3D4E5F60718293B10D /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -582,6 +721,48 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		7A1B2C3D4E5F60718293B10B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Manual;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = BoopUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.OKatBest.BoopUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = Boop;
+			};
+			name = Debug;
+		};
+		7A1B2C3D4E5F60718293B10C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Manual;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = BoopUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.OKatBest.BoopUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = Boop;
+			};
+			name = Release;
+		};
 		2C17C66E24271DDA005C911C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -601,7 +782,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Boop.app/Contents/MacOS/Boop";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Boop2.app/Contents/MacOS/Boop2";
 			};
 			name = Debug;
 		};
@@ -624,7 +805,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Boop.app/Contents/MacOS/Boop";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Boop2.app/Contents/MacOS/Boop2";
 			};
 			name = Release;
 		};
@@ -751,7 +932,7 @@
 				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 14;
+				CURRENT_PROJECT_VERSION = 15;
 				DEVELOPMENT_TEAM = RLZ8XBTX7G;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -764,10 +945,10 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.14;
-				MARKETING_VERSION = 1.4.0;
+				MARKETING_VERSION = 1.4.1;
 				OTHER_CODE_SIGN_FLAGS = "--deep";
-				PRODUCT_BUNDLE_IDENTIFIER = com.OKatBest.Boop;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.OKatBest.Boop2;
+				PRODUCT_NAME = Boop2;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 			};
@@ -781,7 +962,7 @@
 				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 14;
+				CURRENT_PROJECT_VERSION = 15;
 				DEVELOPMENT_TEAM = "";
 				ENABLE_HARDENED_RUNTIME = YES;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -795,10 +976,10 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.14;
-				MARKETING_VERSION = 1.4.0;
+				MARKETING_VERSION = 1.4.1;
 				OTHER_CODE_SIGN_FLAGS = "--deep";
-				PRODUCT_BUNDLE_IDENTIFIER = com.okatbest.boop;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.okatbest.boop2;
+				PRODUCT_NAME = Boop2;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 			};
@@ -878,6 +1059,15 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		7A1B2C3D4E5F60718293B10A /* Build configuration list for PBXNativeTarget "BoopUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7A1B2C3D4E5F60718293B10B /* Debug */,
+				7A1B2C3D4E5F60718293B10C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		2C20666D21FD628E0082570E /* Build configuration list for PBXProject "Boop" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -946,6 +1136,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 2C8BE186249EBB3D00099B73 /* XCRemoteSwiftPackageReference "fuse-swift" */;
 			productName = Fuse;
+		};
+		7A1B2C3D4E5F60718293A4FB /* SavannaKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2C8BE17F249EBADC00099B73 /* XCRemoteSwiftPackageReference "savannakit" */;
+			productName = SavannaKit;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

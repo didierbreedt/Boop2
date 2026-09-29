@@ -28,7 +28,7 @@
                 <outlet property="checkUpdateMenuItem" destination="mdD-pu-Aba" id="Ffr-2n-BVJ"/>
                 <outlet property="editorView" destination="Ef0-Na-xwu" id="Bgy-ZL-Z2D"/>
                 <outlet property="updateBuddy" destination="twH-mb-iPe" id="Sqq-Ci-vlD"/>
-                <outlet property="view" destination="Ef0-Na-xwu" id="wVq-8C-Rni"/>
+                <outlet property="view" destination="EiT-Mj-1SZ" id="wVq-8C-Rni"/>
             </connections>
         </viewController>
         <viewController id="ugb-uZ-HP1" customClass="PopoverViewController" customModule="Boop" customModuleProvider="target">
@@ -126,6 +126,12 @@
                             <menuItem title="Clear" keyEquivalent="n" id="Was-JA-tGl">
                                 <connections>
                                     <action selector="clear:" target="unv-pE-gme" id="Mj1-40-053"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Show Tab Files in Finder" id="b2f-Tb-Fls">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <connections>
+                                    <action selector="revealTabFiles:" target="unv-pE-gme" id="b2f-Tb-Act"/>
                                 </connections>
                             </menuItem>
                             <menuItem title="Open…" hidden="YES" keyEquivalent="o" id="IAo-SY-fd9">
@@ -515,7 +521,7 @@ Gw
                 <rect key="frame" x="0.0" y="0.0" width="480" height="360"/>
                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                 <subviews>
-                    <customView translatesAutoresizingMaskIntoConstraints="NO" id="Ef0-Na-xwu" customClass="SyntaxTextView" customModule="SavannaKit">
+                    <customView translatesAutoresizingMaskIntoConstraints="NO" id="Ef0-Na-xwu" customClass="BoopEditorView" customModule="Boop" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="480" height="360"/>
                     </customView>
                     <customView translatesAutoresizingMaskIntoConstraints="NO" id="Cdf-EW-00p" customClass="OverlayView" customModule="Boop" customModuleProvider="target">

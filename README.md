@@ -1,41 +1,27 @@
+# Boop2
 
-# Boop.
+Boop2 is a macOS scratchpad for transforming text with [Boop](https://github.com/IvanMathy/Boop)'s JavaScript tools. This fork uses a native text editor and adds tabs.
 
+## Download
 
-<p align="center">
+Download `Boop2-macOS.zip` from the [latest Boop2 release](https://github.com/didierbreedt/Boop2/releases/latest). Unzip the archive and move `Boop2.app` to Applications. The app contains both Apple Silicon and Intel code.
 
-  <img src="Boop/Documentation/Images/UI.png?raw=true" width="663" alt="UI Screenshot">
-</p>
+The GitHub build uses an ad hoc signature. Apple has not notarized it. macOS may block the first launch. If you trust this build, open System Settings → Privacy & Security and select **Open Anyway** after the first launch attempt.
 
+Every push to `main` also creates a temporary ZIP under [GitHub Actions](https://github.com/didierbreedt/Boop2/actions). Version tags starting with `v` publish the ZIP as a GitHub release asset.
 
-<p align="center">
-  <a href="https://app.bitrise.io/app/b0c493f8b65e1dac"><img src="https://app.bitrise.io/app/b0c493f8b65e1dac/status.svg?token=BoJJDoViYpKy8V_O5P7ljA&branch=main"></a>
-  <a href="https://sonarcloud.io/dashboard?id=IvanMathy_Boop"><img src="https://sonarcloud.io/api/project_badges/measure?project=IvanMathy_Boop&metric=alert_status"></a>
-</p>   
-<p align="center">
-  <a href="https://boop.okat.best/">Website</a>  •  <a href="https://github.com/IvanMathy/Boop/releases">Download from GitHub</a>  •  <a href="https://apps.apple.com/us/app/boop/id1518425043">Get on the Mac App Store</a><br/>
-    <a href="https://github.com/IvanMathy/Boop/blob/main/Boop/Documentation/Readme.md">Documentation</a>  •  <a href="https://github.com/IvanMathy/Boop/tree/main/Scripts">Find more scripts</a>
-</p>
+## Features
 
-### How to get Boop
+- Native macOS text editor with line numbers and a status bar for word, character, line, and selection counts.
+- Persistent tabs. Boop2 saves each tab as a UTF-8 text file in its sandboxed Application Support folder. Use the File menu to open that folder in Finder.
+- ⌘T creates a tab. ⌘1 through ⌘9 select the matching numbered tab.
+- Settings → General controls the monochrome Boop menu bar icon.
+- Boop's JavaScript tools and custom scripts. Press ⌘B to choose a script.
 
-There are four ways to get Boop. Your best bet is either to
+Boop2 uses plain text. The original SavannaKit syntax coloring is not part of the new editor.
 
- - <a href="https://github.com/IvanMathy/Boop/releases">Download from GitHub releases</a> or
- - <a href="https://apps.apple.com/us/app/boop/id1518425043">Download on the Mac App Store</a><br/>.
+## Build from source
 
- You can also build it from source, or <a href="https://formulae.brew.sh/cask/boop#default">get it from Homebrew</a>, although that is not officially supported.
+Open `Boop/Boop.xcodeproj` in Xcode and run the `Boop` scheme. Run `./install.sh` to build a Debug app and install it at `/Applications/Boop2.app`.
 
-### How to build from source
-
-If you're just trying to get Boop, building from source might not be your best bet. Developing new scripts does not require building from source.
-
-- Clone or download a copy of the repository
-- Open `Boop/Boop.xcodeproj`
-- Press play
-
-
-### Documentation
-
-- [Documentation](Boop/Documentation/Readme.md)
-- [Custom scripts](Boop/Documentation/CustomScripts.md)
+See the [Boop documentation](Boop/Documentation/Readme.md) for the original app and its scripts. Boop2 retains the [MIT license](LICENSE).

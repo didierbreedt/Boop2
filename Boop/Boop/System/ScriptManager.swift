@@ -9,6 +9,13 @@
 import Cocoa
 import SavannaKit
 import Fuse
+import os.log
+
+extension Notification.Name {
+    /// Posted whenever editor content changes outside of typing
+    /// (script runs, services, clear) so stats and tabs stay in sync.
+    static let boopContentChanged = Notification.Name("BoopContentChanged")
+}
 
 
 class ScriptManager: NSObject {
@@ -46,10 +53,14 @@ class ScriptManager: NSObject {
     /// Load built in scripts
     func loadDefaultScripts(){
         let urls = Bundle.main.urls(forResourcesWithExtension: "js", subdirectory: "scripts")
-        
+
+        os_log("found %ld built-in scripts", log: BoopLog.scripts, type: .info,
+               urls?.count ?? 0)
         urls?.forEach { script in
             loadScript(url: script, builtIn: true)
         }
+        os_log("loaded %ld scripts total", log: BoopLog.scripts, type: .info,
+               scripts.count)
     }
     
     
@@ -59,6 +70,7 @@ class ScriptManager: NSObject {
         do {
             
             guard let url = try ScriptManager.getBookmarkURL() else {
+                os_log("no user scripts folder bookmark", log: BoopLog.scripts, type: .info)
                 return
             }
             
@@ -73,7 +85,8 @@ class ScriptManager: NSObject {
             
         }
         catch let error {
-            print(error)
+            os_log("user scripts failed: %{public}@", log: BoopLog.scripts, type: .error,
+                   error.localizedDescription)
             return
         }
     }
@@ -103,7 +116,8 @@ class ScriptManager: NSObject {
             
             
         } catch {
-            print("Unable to load ", url)
+            os_log("unable to load %{public}@", log: BoopLog.scripts, type: .error,
+                   url.path)
         }
     }
     
@@ -139,10 +153,13 @@ class ScriptManager: NSObject {
         }
     }
     
-    func runScript(_ script: Script, into editor: SyntaxTextView) {
-        
+    func runScript(_ script: Script, into editor: BoopEditorView) {
+
+        os_log("running %{public}@", log: BoopLog.scripts, type: .info,
+               script.name ?? "Unknown Script")
+
         let fullText = editor.text
-        
+
         lastScript = script
         
         guard let ranges = editor.contentTextView.selectedRanges as? [NSRange], ranges.reduce(0, { $0 + $1.length }) > 0 else {
@@ -153,6 +170,7 @@ class ScriptManager: NSObject {
             
             let unicodeSafeFullTextLength = editor.contentTextView.textStorage?.length ?? fullText.count
             replaceText(ranges: [NSRange(location: 0, length: unicodeSafeFullTextLength)], values: [result], editor: editor)
+            NotificationCenter.default.post(name: .boopContentChanged, object: editor)
             
             return
         }
@@ -171,11 +189,12 @@ class ScriptManager: NSObject {
         }
         
         replaceText(ranges: ranges, values: values, editor: editor)
+        NotificationCenter.default.post(name: .boopContentChanged, object: editor)
         
         
     }
     
-    private func replaceText(ranges: [NSRange], values: [String], editor: SyntaxTextView) {
+    private func replaceText(ranges: [NSRange], values: [String], editor: BoopEditorView) {
         
         
         let textView = editor.contentTextView
@@ -227,7 +246,7 @@ class ScriptManager: NSObject {
         return scriptExecution.text ?? ""
     }
     
-    func runScriptAgain(editor: SyntaxTextView) {
+    func runScriptAgain(editor: BoopEditorView) {
         guard let script = lastScript else {
             NSSound.beep()
             return
@@ -271,12 +290,14 @@ class ScriptManager: NSObject {
 
 extension ScriptManager: ScriptDelegate {
     func onScriptError(message: String) {
+        os_log("script error: %{public}@", log: BoopLog.scripts, type: .error, message)
         self.statusView.setStatus(.error(message))
     }
-    
+
     func onScriptInfo(message: String) {
+        os_log("script info: %{public}@", log: BoopLog.scripts, type: .info, message)
         self.statusView.setStatus(.info(message))
     }
-    
-    
+
+
 }
